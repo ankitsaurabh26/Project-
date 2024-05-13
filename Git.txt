@@ -1,0 +1,41 @@
+- git init
+- git status
+
+- git add .
+- git add hello.py
+- git add -- . ':!conda_env'
+- git rm --cached <file>... -> to unstage
+
+- git commit -m "This is my Own_Range"
+
+- git remote add origin https://github.com/ankitsaurabh26/ML_notes.git
+- git remote -v
+- git remote remove origin
+
+- git branch  # to check the branch
+- git branch -M main  # to rename the branch
+
+- git push origin main  # origin = github par remote repo. ka naam, main branch hai remote repo. par 
+- git push -u origin main # and then use `git push` only
+
+- git checkout -b <new_branch_name> # to create new branch
+- git checkout <branch_to_move_into>
+- git branch --delete <branch_name> #same branch par hoke usko delete nahi kar skte
+
+- git log  # to check all the commits
+
+- git pull origin main
+- git pull --rebase origin main # fetches the latest changes from the remote master branch and rebases your local branch onto it
+
+- Remove-Item ".git" -Force -Recurse
+
+- conda create --prefix ./env pandas numpy matplotlib scikit-learn jupyter
+- !conda install --yes --prefix {sys.prefix} seaborn
+
+- (Copying one env to other project)
+  1. Activate the conda 
+  2. conda env export > environment.yml
+  3. conda deactivate
+  4. cd ../project_folder
+  5. conda env create --prefix ./env -f ../environment.yml
+- 
